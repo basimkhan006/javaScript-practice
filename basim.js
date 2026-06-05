@@ -91,129 +91,152 @@ addnubers(num,num1);
 
 
 
-let name = "Muhammad Yousuf";
-console.log("My name is:", name);
+// let name = "Muhammad Yousuf";
+// console.log("My name is:", name);
 
 
-// Q2: Add two numbers
-let a = 20;
-let b = 10;
-console.log("Sum:", a + b);
+// // Q2: Add two numbers
+// let a = 20;
+// let b = 10;
+// console.log("Sum:", a + b);
 
 
-// Q3: Check number is even or odd
-let number = 7;
+// // Q3: Check number is even or odd
+// let number = 7;
 
-if (number % 2 === 0) {
-  console.log(number + " is Even");
-} else {
-  console.log(number + " is Odd");
-}
-
-
-// Q4: Find largest number from three numbers
-let x = 15;
-let y = 30;
-let z = 25;
-
-if (x > y && x > z) {
-  console.log("Largest:", x);
-} else if (y > x && y > z) {
-  console.log("Largest:", y);
-} else {
-  console.log("Largest:", z);
-}
+// if (number % 2 === 0) {
+//   console.log(number + " is Even");
+// } else {
+//   console.log(number + " is Odd");
+// }
 
 
-// Q5: Print numbers from 1 to 10
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
-}
+// // Q4: Find largest number from three numbers
+// let x = 15;
+// let y = 30;
+// let z = 25;
+
+// if (x > y && x > z) {
+//   console.log("Largest:", x);
+// } else if (y > x && y > z) {
+//   console.log("Largest:", y);
+// } else {
+//   console.log("Largest:", z);
+// }
 
 
-// Q6: Print multiplication table
-let tableNumber = 5;
-
-for (let i = 1; i <= 10; i++) {
-  console.log(tableNumber + " x " + i + " = " + tableNumber * i);
-}
+// // Q5: Print numbers from 1 to 10
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
 
 
-// Q7: Calculate factorial
-let factNum = 5;
-let factorial = 1;
+// // Q6: Print multiplication table
+// let tableNumber = 5;
 
-for (let i = 1; i <= factNum; i++) {
-  factorial *= i;
-}
-
-console.log("Factorial:", factorial);
+// for (let i = 1; i <= 10; i++) {
+//   console.log(tableNumber + " x " + i + " = " + tableNumber * i);
+// }
 
 
-// Q8: Reverse a string
-let text = "JavaScript";
-let reverseText = "";
+// // Q7: Calculate factorial
+// let factNum = 5;
+// let factorial = 1;
 
-for (let i = text.length - 1; i >= 0; i--) {
-  reverseText += text[i];
-}
+// for (let i = 1; i <= factNum; i++) {
+//   factorial *= i;
+// }
 
-console.log("Reverse:", reverseText);
-
-
-// Q9: Count vowels in a string
-let sentence = "I am learning JavaScript";
-let vowels = "aeiouAEIOU";
-let count = 0;
-
-for (let i = 0; i < sentence.length; i++) {
-  if (vowels.includes(sentence[i])) {
-    count++;
-  }
-}
-
-console.log("Vowels Count:", count);
+// console.log("Factorial:", factorial);
 
 
-// Q10: Find total and average of array
-let marks = [80, 75, 90, 85, 70];
-let total = 0;
+// // Q8: Reverse a string
+// let text = "JavaScript";
+// let reverseText = "";
 
-for (let i = 0; i < marks.length; i++) {
-  total += marks[i];
-}
+// for (let i = text.length - 1; i >= 0; i--) {
+//   reverseText += text[i];
+// }
 
-let average = total / marks.length;
-
-console.log("Total Marks:", total);
-console.log("Average Marks:", average);
+// console.log("Reverse:", reverseText);
 
 
-// Q11: Find highest marks
-let highest = marks[0];
+// // Q9: Count vowels in a string
+// let sentence = "I am learning JavaScript";
+// let vowels = "aeiouAEIOU";
+// let count = 0;
 
-for (let i = 1; i < marks.length; i++) {
-  if (marks[i] > highest) {
-    highest = marks[i];
-  }
-}
+// for (let i = 0; i < sentence.length; i++) {
+//   if (vowels.includes(sentence[i])) {
+//     count++;
+//   }
+// }
 
-console.log("Highest Marks:", highest);
+// console.log("Vowels Count:", count);
 
 
-// Q12: Simple calculator using function
-function calculator(num1, num2, operator) {
-  if (operator === "+") {
+// // Q10: Find total and average of array
+// let marks = [80, 75, 90, 85, 70];
+// let total = 0;
+
+// for (let i = 0; i < marks.length; i++) {
+//   total += marks[i];
+// }
+
+// let average = total / marks.length;
+
+// console.log("Total Marks:", total);
+// console.log("Average Marks:", average);
+
+
+// // Q11: Find highest marks
+// let highest = marks[0];
+
+// for (let i = 1; i < marks.length; i++) {
+//   if (marks[i] > highest) {
+//     highest = marks[i];
+//   }
+// }
+
+// console.log("Highest Marks:", highest);
+
+
+// // Q12: Simple calculator using function
+// function calculator(num1, num2, operator) {
+//   if (operator === "+") {
+//     return num1 + num2;
+//   } else if (operator === "-") {
+//     return num1 - num2;
+//   } else if (operator === "*") {
+//     return num1 * num2;
+//   } else if (operator === "/") {
+//     return num1 / num2;
+//   } else {
+//     return "Invalid Operator";
+//   }
+// }
+
+// console.log("Calculator Result:", calculator(20, 5, "*"));
+
+
+// function str() {
+//   let username = "khan"
+//   console.log(username);
+// }
+// str()
+
+
+function calculator(num1, num2, operator){
+  if (operator === "+"){
     return num1 + num2;
-  } else if (operator === "-") {
+  }else if (operator === "-"){
     return num1 - num2;
-  } else if (operator === "*") {
+  }else if (operator === "*"){
     return num1 * num2;
-  } else if (operator === "/") {
+  }else if (operator ==="/"){
     return num1 / num2;
-  } else {
-    return "Invalid Operator";
+  }else {
+    return "invalid operator"
   }
 }
-
 console.log("Calculator Result:", calculator(20, 5, "*"));
