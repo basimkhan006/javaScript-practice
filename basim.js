@@ -226,17 +226,73 @@
 // str()
 
 
-function calculator(num1, num2, operator){
-  if (operator === "+"){
-    return num1 + num2;
-  }else if (operator === "-"){
-    return num1 - num2;
-  }else if (operator === "*"){
-    return num1 * num2;
-  }else if (operator ==="/"){
-    return num1 / num2;
-  }else {
-    return "invalid operator"
-  }
+// function calculator(num1, num2, operator){
+//   if (operator === "+"){
+//     return num1 + num2;
+//   }else if (operator === "-"){
+//     return num1 - num2;
+//   }else if (operator === "*"){
+//     return num1 * num2;
+//   }else if (operator ==="/"){
+//     return num1 / num2;
+//   }else {
+//     return "invalid operator"
+//   }
+// }
+// console.log("Calculator Result:", calculator(20, 5, "*"));
+
+
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
+const taskCount = document.getElementById("taskCount");
+
+let totalTasks = 0;
+
+function updateCount() {
+  taskCount.textContent = totalTasks;
 }
-console.log("Calculator Result:", calculator(20, 5, "*"));
+
+addBtn.addEventListener("click", () => {
+  const taskText = taskInput.value.trim();
+
+  if (taskText === "") {
+    alert("Please enter a task.");
+    return;
+  }
+
+  const li = document.createElement("li");
+
+  const taskSpan = document.createElement("span");
+  taskSpan.textContent = taskText;
+
+  taskSpan.addEventListener("click", () => {
+    taskSpan.classList.toggle("completed");
+  });
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+  deleteBtn.classList.add("delete-btn");
+
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+    totalTasks--;
+    updateCount();
+  });
+
+  li.appendChild(taskSpan);
+  li.appendChild(deleteBtn);
+
+  taskList.appendChild(li);
+
+  totalTasks++;
+  updateCount();
+
+  taskInput.value = "";
+});
+
+taskInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    addBtn.click();
+  }
+});
