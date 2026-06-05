@@ -10,21 +10,21 @@
 // let name1 = prompt("Enter your Name")
 // showWelcome(name1);
 
-function addnubers(num1, num2){
-    let result = num1 + num2;
-    alert("Total = " + result);
-}
-function startAddition() {
+// function addnubers(num1, num2){
+//     let result = num1 + num2;
+//     alert("Total = " + result);
+// }
+// function startAddition() {
 
-    let firstnumber = number(prompt("enter your first num"))
-    let secondnumber = number(prompt("enter your second num"))
+//     let firstnumber = number(prompt("enter your first num"))
+//     let secondnumber = number(prompt("enter your second num"))
 
-    addnubers(firstnumber,secondnumber);
+//     addnubers(firstnumber,secondnumber);
 
-}
-let num = prompt("enter your first num")
-let num1 = prompt("enter your second num")
-addnubers(num,num1);
+// }
+// let num = prompt("enter your first num")
+// let num1 = prompt("enter your second num")
+// addnubers(num,num1);
 
 // var remainder = 10 % 3;
 // alert(remainder);
